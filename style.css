@@ -143,13 +143,23 @@ button {
   color: var(--on);
   display: grid;
   place-items: center;
-  font: 700 clamp(3rem, 14vw, 10rem)/1 var(--display);
+  font: 700 clamp(2rem, 5vw, 4rem)/1.12 var(--display);
   letter-spacing: -.05em;
   transition: transform 1s var(--ease) .1s
 }
 
 .intro span {
+  width: min(22em, calc(100vw - 2 * var(--pad)));
+  text-align: center;
+  text-wrap: balance;
   animation: introPulse 1.1s var(--ease) both
+}
+
+.intro strong {
+  display: block;
+  margin-bottom: .15em;
+  font-size: clamp(3rem, 9vw, 7rem);
+  line-height: 1
 }
 
 body.is-ready .intro {
